@@ -1,0 +1,55 @@
+﻿body
+{
+   margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.HeaderDiv
+{
+    background-color: transparent;
+    color: White;
+    font-family: Times New Roman,Arial;
+    text-align: center;
+    margin-left: 4px;
+    margin-right: auto;
+	width: 1165px;
+}
+
+.FooterDiv
+{
+    background-color:#009933;
+    color: White;
+    font-family: Times New Roman,Arial;
+    font-size: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0px;
+	width:auto;
+	height: 55px;
+	top: auto;
+	right: 333px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.PageBody
+{
+    background-color: #99ff99;
+    font-family: Times New Roman,Arial;
+    font-size: 14px;
+    direction: rtl;
+    width: 95%;
+    margin-right: auto;
+    margin-left:auto; 
+    padding-top:10px;
+}
+
+.GrdDiv
+{
+    width:19%;
+    float:left;
+     text-align:center;
+	height: 17px;
+	margin-right: 2px;
+}

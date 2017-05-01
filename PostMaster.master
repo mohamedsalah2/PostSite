@@ -1,0 +1,65 @@
+﻿<%@ Master Language="VB" CodeFile="PostMaster.master.vb" Inherits="PostMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper" style="background: url(images/bg.jpg) repeat-x">
+            <div class="HeaderDiv" style="width: 100%">
+            <img alt="Image Header" src="Images/Logo.gif" 
+                style="width: 95%; height: 96px; margin-right :auto; margin-left:auto" />
+        </div>
+        <div style="direction: rtl; width: 95%; margin-left: auto; margin-right: auto" dir="rtl">
+            <asp:Menu ID="Menu1" runat="server" BackColor="#009933" DynamicHorizontalOffset="2"
+                Font-Names="Times New Roman" Font-Size="x-Large" ForeColor="White" Orientation="Horizontal"
+                StaticSubMenuIndent="10px" Font-Bold="False" style="font-size:large">
+                <DynamicHoverStyle BackColor="#003300" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#009933" />
+                <DynamicSelectedStyle BackColor="#FFCC66" />
+                <Items>
+                    <asp:MenuItem Text="تسجيل يومية" Value="تسجيل يومية" NavigateUrl="~/DailyAccc.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                    <asp:MenuItem Text="التقارير" Value="التقارير" NavigateUrl="~/Daily1MT.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                    <asp:MenuItem Text="أرصدة المكتب" Value="أرصدة المكتب" 
+                        NavigateUrl="~/Balances.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                    <asp:MenuItem Text="بيانات المكاتب" Value="بيانات المكاتب" 
+                        NavigateUrl="~/OffceData.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+<asp:MenuItem NavigateUrl="~/EMP.aspx" Text="الأجازات" Value="الأجازات"></asp:MenuItem>
+<asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                    <asp:MenuItem Text="تغيير كلمة المرور" Value="تغيير كلمة المرور" NavigateUrl="~/ChngePswrd.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                    <asp:MenuItem Text="الأعدادات" Value="الأعدادات"></asp:MenuItem>
+                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                    <asp:MenuItem Text="خروج" Value="exit" NavigateUrl="~/LOGIN.aspx"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#FFCC66" />
+            </asp:Menu>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="FooterDiv" dir="rtl">
+        <br />
+&nbsp;حقوق البرنامج محفوظة لـ محمد صلاح , أحمد شرف الدين بركات   
+        @ 2017<br />
+        <br />
+      </div>
+    </form>
+</body>
+</html>

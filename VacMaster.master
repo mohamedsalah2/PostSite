@@ -1,0 +1,52 @@
+﻿<%@ Master Language="VB" CodeFile="VacMaster.master.vb" Inherits="VacMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper" style="background: url(images/bg.jpg) repeat-x">
+        <div class="HeaderDiv ">
+            <img alt="Image Header" src="Images/Logo.gif" style="width: 96%" />
+        </div>
+        <div style="direction: rtl; width: 80%; margin-left: auto; margin-right: auto" dir="rtl">
+            <asp:Menu ID="Menu1" runat="server" BackColor="#009933" DynamicHorizontalOffset="2"
+                Font-Names="Times New Roman" Font-Size="Medium" ForeColor="White" Orientation="Horizontal"
+                StaticSubMenuIndent="10px" Font-Bold="True" Style="font-size: medium">
+                <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#FFFBD6" />
+                <DynamicSelectedStyle BackColor="#FFCC66" />
+                <Items>
+                    <asp:MenuItem Text="تسجيل أجازة" Value="تسجيل أجازة" 
+                        NavigateUrl="~/AddVac.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                    <asp:MenuItem Text="بيانات الموظفين" Value="بيانات الموظفين" 
+                        NavigateUrl="~/EMP.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                    <asp:MenuItem Text="إستعلام عن الأجازات" Value="إستعلام عن الأجازات">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Main.aspx" Text="1خزينة" Value="1خزينة">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                    <asp:MenuItem Text="Log out  خروج" Value="exit" NavigateUrl="~/LOGIN.aspx"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#FFCC66" />
+            </asp:Menu>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
